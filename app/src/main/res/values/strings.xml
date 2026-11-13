@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">Attendance Monitoring System</string>
+    <string name="attendease">ATTENDEASE</string>
+    <string name="classes_title"> Classes</string>
+    <string name="records_title"> Records</string>
+    <string name="class_register">← CLASS REGISTER</string>
+    <string name="student_attendance">Student Attendance</string>
+    <string name="present_title">✓ PRESENT</string>
+    <string name="absent_title">✕ ABSENT</string>
+    <string name="late_title">🕒 LATE</string>
+    <string name="student_name_label">Student Name</string>
+    <string name="student_name_hint">e.g. Alessandro Solis</string>
+    <string name="course_label">Course / Program</string>
+    <string name="course_hint">e.g. BS Computer Science</string>
+    <string name="subject_label">Subject</string>
+    <string name="subject_hint">e.g. Mobile Application Development</string>
+    <string name="attendance_status_label">Attendance Status</string>
+    <string name="status_present">Present</string>
+    <string name="status_late">Late</string>
+    <string name="status_absent">Absent</string>
+    <string name="status_excused">Excused</string>
+    <string name="session_notes_label">Session Notes &amp; Checklist</string>
+    <string name="check_present">Present in Classroom</string>
+    <string name="check_excuse">Excuse Letter Submitted</string>
+    <string name="check_medical">Medical Certificate Submitted</string>
+    <string name="check_parent">No Document Submitted</string>
+    <string name="submit_record">SUBMIT RECORD  →</string>
+    <string name="records_and_logs">RECORDS &amp; LOGS</string>
+
+    <string name="academic_suite">Academic Suite</string>
+    <string name="est_2026">EST. 2026</string>
+    <string name="tagline_pill">🍃 A thoughtful way to show up</string>
+    <string name="attendease_heading">AttendEase</string>
+    <string name="login_description">Track attendance, streamline daily monitoring, and nurture student engagement — all in one calm, intentional space.</string>
+    <string name="badge_fast">Fast</string>
+    <string name="badge_accurate">Accurate</string>
+    <string name="badge_organized">Organized</string>
+    <string name="email_hint">Email Address</string>
+    <string name="password_hint">Password</string>
+    <string name="get_started">Get Started  →</string>
+    <string name="sign_in_register">Sign in / Register Account</string>
+
+    <string name="register">Register</string>
+    <string name="begin_with_intent">Begin with intent.</string>
+    <string name="register_description">Create an account to manage student attendance records seamlessly.</string>
+    <string name="email_required">Email Address *</string>
+    <string name="password_required">Password *</string>
+    <string name="confirm_password_required">Confirm Password *</string>
+    <string name="reg_email_hint">e.g. student@school.edu</string>
+    <string name="reg_password_hint">••••••••••••</string>
+    <string name="reg_confirm_hint">Re-enter Password</string>
+    <string name="register_account">REGISTER ACCOUNT</string>
+    <string name="already_have_account">Already have an account? Login</string>
+
+    <string name="attendance_ledger">ATTENDANCE LEDGER</string>
+    <string name="attendance_records_logs">Attendance Records &amp; Logs</string>
+    <string name="back_to_class_register">← BACK TO CLASS REGISTER</string>
+
+    <string name="desc_logo">Logo</string>
+    <string name="desc_calendar">Calendar</string>
+    <string name="desc_checkmark">Checkmark</string>
+    <string name="desc_graduation_cap">Graduation Cap</string>
+    <string name="desc_back">Back</string>
+</resources>

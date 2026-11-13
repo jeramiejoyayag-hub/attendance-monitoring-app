@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_cream">#FBF8F3</color>
+    <color name="bg_cream_card">#F5F1E8</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="green_forest_dark">#1E3A2B</color>
+    <color name="green_forest_medium">#2D4F3C</color>
+    <color name="green_sage">#4E7B5C</color>
+    <color name="green_light_pill">#E2F3E5</color>
+    <color name="green_text">#1E6B34</color>
+
+    <color name="status_present_bg">#E2F3E5</color>
+    <color name="status_present_text">#1E6B34</color>
+    <color name="status_late_bg">#FDF3E3</color>
+    <color name="status_late_text">#B86E00</color>
+    <color name="status_absent_bg">#FCE3E1</color>
+    <color name="status_absent_text">#C0392B</color>
+    <color name="status_excused_bg">#EAEFEF</color>
+    <color name="status_excused_text">#4A607A</color>
+
+    <color name="text_primary">#1C251F</color>
+    <color name="text_secondary">#606A62</color>
+    <color name="text_muted">#8E9690</color>
+    <color name="stroke_light">#E5E0D5</color>
+    <color name="stroke_medium">#D4CEBF</color>
+    <color name="pill_bg">#EDE8DE</color>
+    <color name="pill_text">#5A5243</color>
+</resources>

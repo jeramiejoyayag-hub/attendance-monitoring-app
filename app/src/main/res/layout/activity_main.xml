@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    android:background="@color/bg_cream">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_logo_a"
+                android:contentDescription="@string/desc_logo"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/attendease"
+                android:textColor="@color/text_muted"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.08" />
+
+            <!-- Spacer to push avatar icon to the far right -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <!-- Avatar Icon replacing the "Classes" text -->
+            <ImageView
+                android:id="@+id/ivUserAvatar"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@android:drawable/ic_menu_myplaces"
+                android:background="@drawable/bg_pill_cream"
+                android:padding="4dp"
+                android:contentDescription="User Profile"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/class_register"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.08"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/student_attendance"
+            android:fontFamily="serif"
+            android:textColor="@color/text_primary"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="14dp" />
+
+        <LinearLayout
+            android:id="@+id/llDateContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_pill_cream"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/tvDateNavigator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="‹   📅 Today, 29 October 2026   ›"
+                android:textColor="@color/text_primary"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="18dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_pill_green"
+                android:orientation="vertical"
+                android:paddingVertical="12dp"
+                android:paddingHorizontal="12dp"
+                android:layout_marginEnd="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/present_title"
+                    android:textColor="@color/status_present_text"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvPresentCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/status_present_text"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_pill_red"
+                android:orientation="vertical"
+                android:paddingVertical="12dp"
+                android:paddingHorizontal="12dp"
+                android:layout_marginEnd="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/absent_title"
+                    android:textColor="@color/status_absent_text"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvAbsentCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/status_absent_text"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_pill_orange"
+                android:orientation="vertical"
+                android:paddingVertical="12dp"
+                android:paddingHorizontal="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/late_title"
+                    android:textColor="@color/status_late_text"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvLateCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/status_late_text"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="2dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/student_name_label"
+            android:textColor="@color/text_primary"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/etStudentName"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="@string/student_name_hint"
+            android:textColorHint="@color/text_muted"
+            android:textColor="@color/text_primary"
+            android:background="@drawable/bg_input_field"
+            android:paddingHorizontal="14dp"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="10dp"
+            android:textSize="13sp"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/course_label"
+            android:textColor="@color/text_primary"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/etStudentCourse"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="@string/course_hint"
+            android:textColorHint="@color/text_muted"
+            android:textColor="@color/text_primary"
+            android:background="@drawable/bg_input_field"
+            android:paddingHorizontal="14dp"
+            android:drawableStart="@drawable/ic_graduation_cap"
+            android:drawablePadding="10dp"
+            android:textSize="13sp"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/subject_label"
+            android:textColor="@color/text_primary"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/etSubject"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="@string/subject_hint"
+            android:textColorHint="@color/text_muted"
+            android:textColor="@color/text_primary"
+            android:background="@drawable/bg_input_field"
+            android:paddingHorizontal="14dp"
+            android:drawableStart="@drawable/ic_shield"
+            android:drawablePadding="10dp"
+            android:textSize="13sp"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/attendance_status_label"
+            android:textColor="@color/text_primary"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:id="@+id/rgStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <RadioButton
+                    android:id="@+id/rbPresent"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/status_present"
+                    android:textColor="@color/status_present_text"
+                    android:buttonTint="@color/status_present_text"
+                    android:textSize="13sp"
+                    android:background="@drawable/bg_pill_green"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="8dp"
+                    android:layout_marginEnd="6dp" />
+
+                <RadioButton
+                    android:id="@+id/rbLate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/status_late"
+                    android:textColor="@color/status_late_text"
+                    android:buttonTint="@color/status_late_text"
+                    android:textSize="13sp"
+                    android:background="@drawable/bg_pill_orange"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbAbsent"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/status_absent"
+                    android:textColor="@color/status_absent_text"
+                    android:buttonTint="@color/status_absent_text"
+                    android:textSize="13sp"
+                    android:background="@drawable/bg_pill_red"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="8dp"
+                    android:layout_marginEnd="6dp" />
+
+                <RadioButton
+                    android:id="@+id/rbExcused"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/status_excused"
+                    android:textColor="@color/status_excused_text"
+                    android:buttonTint="@color/status_excused_text"
+                    android:textSize="13sp"
+                    android:background="@drawable/bg_pill_blue"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="8dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/session_notes_label"
+            android:textColor="@color/text_primary"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <CheckBox
+            android:id="@+id/cbUniform"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/check_present"
+            android:textColor="@color/text_secondary"
+            android:buttonTint="@color/green_forest_dark"
+            android:textSize="13sp" />
+
+        <CheckBox
+            android:id="@+id/cbHomework"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/check_excuse"
+            android:textColor="@color/text_secondary"
+            android:buttonTint="@color/green_forest_dark"
+            android:textSize="13sp" />
+
+        <CheckBox
+            android:id="@+id/cbMedicalNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/check_medical"
+            android:textColor="@color/text_secondary"
+            android:buttonTint="@color/green_forest_dark"
+            android:textSize="13sp" />
+
+        <CheckBox
+            android:id="@+id/cbParentNotified"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/check_parent"
+            android:textColor="@color/text_secondary"
+            android:buttonTint="@color/green_forest_dark"
+            android:textSize="13sp"
+            android:layout_marginBottom="20dp" />
+
+        <Button
+            android:id="@+id/btnSaveAttendance"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/submit_record"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:backgroundTint="@null"
+            android:background="@drawable/bg_button_primary"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:id="@+id/btnViewLogs"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/records_and_logs"
+            android:textColor="@color/text_primary"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:backgroundTint="@null"
+            android:background="@drawable/bg_button_secondary" />
+
+    </LinearLayout>
+</ScrollView>
